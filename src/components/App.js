@@ -1,6 +1,14 @@
 import './App.css';
+import * as api from '../utils/api';
 
 function App() {
+
+  const test = () => {
+    api.searchByName('love').then((res) => console.log(res))
+  }
+
+  test()
+
   return (
     <div className="App">
       <header className="App-header">
