@@ -11,11 +11,16 @@ function checkResponse(res) {
 
 export function searchByName(name) {
   return fetch(`${BASE_URL}/movie?search=${name}&field=name&isStrict=false&token=${DEMO_TOKEN}`, {
+    method: 'GET',
+    //mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
+      //'Access-Control-Allow-Origin': '*',
+      //'Access-Control-Allow-Credentials': 'true',
     },
-    method: 'GET'
+    //options: {
+    //  mode: 'no-cors'
+    //}
     })
     .then(res => checkResponse(res))
 }
