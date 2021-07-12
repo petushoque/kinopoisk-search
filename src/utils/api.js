@@ -1,6 +1,6 @@
 export const BASE_URL = 'https://api.kinopoisk.cloud';
 /* Не более 100 запросов в день */
-export const DEMO_TOKEN = '2c514ced02b254719c5c79ca04803292';
+export const DEMO_TOKEN = '52W3005-H7E4XTF-PPFJSQD-MG3JZS7';
 
 function checkResponse(res) {
     if (res.ok) {
