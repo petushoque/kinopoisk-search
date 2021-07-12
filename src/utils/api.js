@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.kinopoisk.cloud';
+export const BASE_URL = 'https://api.kinopoisk.dev';
 /* Не более 100 запросов в день */
 export const DEMO_TOKEN = '52W3005-H7E4XTF-PPFJSQD-MG3JZS7';
 
@@ -13,7 +13,9 @@ export function searchByName(name) {
   return fetch(`${BASE_URL}/movie?search=${name}&field=name&isStrict=false&token=${DEMO_TOKEN}`, {
     headers: {
       'Content-Type': 'application/json',
-    }
+      'Access-Control-Allow-Origin': '*',
+    },
+    method: 'GET'
     })
     .then(res => checkResponse(res))
 }
